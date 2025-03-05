@@ -72,13 +72,13 @@ jobs:
         if: github.ref == 'refs/heads/main'
       - name: Upload tarball to release  # in case we need it for the thumbdrive-option at the workshop
         run: |
-          docker save ${{ env.REGISTRY_IMAGE }}:${{ env.TAG_NAME }} | gzip > ./roscon_delib_ws_2024.tar.gz
+          docker save ${{ env.REGISTRY_IMAGE }}:${{ env.TAG_NAME }} | gzip > ./delib_ws_2025.tar.gz
       - name: Release
         # Do not release on PRs from forks.
         if: ${{ !github.event.pull_request.head.repo.fork }}
         uses: ncipollo/release-action@v1
         with:
-          artifacts: './roscon_delib_ws_2024.tar.gz'
+          artifacts: './delib_ws_2025.tar.gz'
           token: ${{ secrets.GITHUB_TOKEN }}
           commit: ${{ github.sha }}
           allowUpdates: true

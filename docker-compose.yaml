@@ -13,11 +13,11 @@
 
 services:
   base:
-    image: ghcr.io/ros-wg-delib/roscon_delib_ws_2024:latest
+    image: ghcr.io/volkerkrueger/delib_ws_2025:latest
     build:
       context: .
       dockerfile: .docker/Dockerfile
-      target: roscon_delib_ws_2024
+      target: delib_ws_2025
     # Ensures signals are actually passed and reaped in the container for shutdowns.
     # https://docs.docker.com/compose/compose-file/compose-file-v3/#init
     init: true

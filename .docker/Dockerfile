@@ -1,6 +1,6 @@
 # Dockerfile for ROSCon 2024 Deliberation Workshop
 
-FROM ros:jazzy-ros-base AS roscon_delib_ws_2024
+FROM ros:jazzy-ros-base AS delib_ws_2025
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install apt dependencies.
@@ -24,7 +24,8 @@ WORKDIR /delib_ws
 COPY python-requirements.txt /delib_ws
 RUN pip3 install --break-system-packages -r python-requirements.txt
 COPY dependencies src/dependencies
-RUN source /opt/ros/jazzy/setup.bash && \
+RUN apt-get update && \
+    source /opt/ros/jazzy/setup.bash && \
     rosdep install --from-paths src -y --ignore-src
 # SkiROS2 dependencies
 RUN src/dependencies/SkiROS2/skiros2/skiros2/scripts/install_fd_task_planner.sh
