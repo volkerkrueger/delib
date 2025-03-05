@@ -60,10 +60,10 @@ docker compose --help
 First, open a terminal window and clone this repository and its submodules.
 
 ```bash
-git clone --recurse-submodules https://github.com/ros-wg-delib/roscon24-workshop.git
+git clone --recurse-submodules git@github.com:volkerkrueger/delib.git
 ```
 
-Change into the repository folder (`cd roscon24-workshop`) and start the Docker container.
+Change into the repository folder (`cd delib`) and start the Docker container.
 
 ```bash
 docker compose run base
