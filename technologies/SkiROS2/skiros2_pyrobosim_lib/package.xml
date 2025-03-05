@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>skiros2_pyrobosim_lib</name>
+  <version>2.0.0</version>
+  <description>SkiROS2 skills and knowledge representation for a set of pyrobosim problems </description>
+
+  <maintainer email="matthias.mayr@cs.lth.se">Matthias Mayr</maintainer>
+  
+  <license>LGPL-3.0-or-later</license>
+  <author email="matthias.mayr@cs.lth.se">Matthias Mayr</author>
+
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>skiros2</exec_depend>
+  <exec_depend>skiros2_gui</exec_depend>
+  <exec_depend>skiros2_std_skills</exec_depend>
+  <exec_depend>skiros2_std_reasoners</exec_depend>
+  <exec_depend>pyrobosim</exec_depend>
+  <exec_depend>pyrobosim_ros</exec_depend>
+  <exec_depend>pyrobosim_msgs</exec_depend>
+  <exec_depend>delib_ws_worlds</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

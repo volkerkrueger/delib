@@ -1,0 +1,12 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" initial="initial" version="1.0" name="BtTopicAction" model_src="">
+
+    <state id="initial">
+        <transition target="initial" event="bt_1001_tick">
+            <send event="topic_charge_msg"/>
+            <send event="bt_1001_response">
+                <param name="status" expr="1"/>
+            </send>
+        </transition>
+    </state>
+
+</scxml>

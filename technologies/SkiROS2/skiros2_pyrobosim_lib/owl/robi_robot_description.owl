@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://rvmi.aau.dk/ontologies/robi.owl#"
+     xml:tts="http://rvmi.aau.dk/ontologies/robi.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skiros="http://rvmi.aau.dk/ontologies/skiros.owl#"
+     xmlns:tts="http://rvmi.aau.dk/ontologies/robi.owl#">
+    <owl:Ontology rdf:about="http://rvmi.aau.dk/ontologies/robi.owl">
+        <owl:imports rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl"/>
+    </owl:Ontology>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Soda -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Soda">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Snacks"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Butter -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Butter">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Part"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Bread -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Bread">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Snacks"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Waste -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Waste">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Part"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Snacks -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Snacks">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Part"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Dumpster -->
+    
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Dumpster">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Pantry -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Pantry">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Fridge -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Fridge">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Door -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Door">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Table -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Table">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Charger -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Charger">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+    </owl:Class>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Room -->
+
+    <owl:Class rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Room">
+        <rdfs:subClassOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+    </owl:Class>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Open -->
+
+    <owl:DatatypeProperty rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Open">
+        <rdfs:domain rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#OpenableLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#BatteryPercentage -->
+
+    <owl:DatatypeProperty rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#BatteryPercentage">
+        <rdfs:subPropertyOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#DeviceProperty"/>
+        <rdfs:domain rdf:resource="http://rvmi.aau.dk/ontologies/cora.owl#Robot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#Reachable -->
+
+    <owl:DatatypeProperty rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#Reachable">
+        <rdfs:domain rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Relations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#adjacentLocation -->
+
+    <owl:ObjectProperty rdf:about="http://rvmi.aau.dk/ontologies/skiros.owl#adjacentLocation">
+        <rdfs:subPropertyOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#spatiallyRelated"/>
+        <rdfs:domain rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+        <rdfs:range rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#Location"/>
+    </owl:ObjectProperty>
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#at 
+
+    <owl:ObjectProperty rdf:about="http://rvmi.aau.dk/ontologies/robi.owl#at">
+        <rdfs:subPropertyOf rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl#conditionProperty"/>
+    </owl:ObjectProperty>-->
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- http://rvmi.aau.dk/ontologies/skiros.owl#tts_robot -->
+
+    <owl:NamedIndividual rdf:about="http://rvmi.aau.dk/ontologies/robi.owl#robot">
+        <rdf:type rdf:resource="http://www.inf.ufrgs.br/phi-group/ontologies/cora.owl#Robot"/>
+        <skiros:DiscreteReasoner>AauSpatialReasoner</skiros:DiscreteReasoner>
+        <skiros:SkillMgr>robi_robot</skiros:SkillMgr>
+    </owl:NamedIndividual>
+</rdf:RDF>

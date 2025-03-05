@@ -1,0 +1,38 @@
+[submodule "pyrobosim"]
+	path = dependencies/pyrobosim
+	url = https://github.com/sea-bass/pyrobosim.git
+	branch = main
+[submodule "skiros2"]
+	path = dependencies/SkiROS2/skiros2
+	url = https://github.com/RobotlabLTH/skiros2
+	branch = fix/ros2_jazzy_build
+[submodule "skiros2_std_lib"]
+	path = dependencies/SkiROS2/skiros2_std_lib
+	url = https://github.com/RobotlabLTH/skiros2_std_lib
+	branch = ros2
+[submodule "skiros2_pyrobosim_lib"]
+	path = technologies/SkiROS2/skiros2_pyrobosim_lib
+	url = https://github.com/matthias-mayr/skiros2_pyrobosim_lib.git
+	branch = main
+[submodule "flexbe_behavior_engine"]
+	path = dependencies/FlexBE/flexbe_behavior_engine
+	url = https://github.com/FlexBE/flexbe_behavior_engine.git
+	branch = ros2-devel
+[submodule "flexbe_webui"]
+	path = dependencies/FlexBE/flexbe_webui
+	url = https://github.com/FlexBE/flexbe_webui.git
+	branch = main
+[submodule "BehaviorTree.ROS2"]
+	path = dependencies/BehaviorTree.ROS2
+	url = https://github.com/BehaviorTree/BehaviorTree.ROS2.git
+	branch = humble
+[submodule "dependencies/convince/AS2FM"]
+	path = dependencies/convince/AS2FM
+	url = https://github.com/convince-project/AS2FM.git
+[submodule "dependencies/convince/bt_tools"]
+	path = dependencies/convince/bt_tools
+	url = https://github.com/boschresearch/bt_tools.git
+[submodule "dependencies/ros2_ros_bt_py"]
+	path = dependencies/ros2_ros_bt_py
+	url = https://github.com/fzi-forschungszentrum-informatik/ros2_ros_bt_py.git
+	branch = main

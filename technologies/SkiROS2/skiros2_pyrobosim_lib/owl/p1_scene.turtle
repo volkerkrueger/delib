@@ -1,0 +1,214 @@
+@prefix cora: <http://www.inf.ufrgs.br/phi-group/ontologies/cora.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix robi: <http://rvmi.aau.dk/ontologies/robi.owl#> .
+@prefix rparts: <http://www.inf.ufrgs.br/phi-group/ontologies/RParts.owl#> .
+@prefix skiros: <http://rvmi.aau.dk/ontologies/skiros.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skiros:Scene-0 a skiros:Scene,
+        owl:NamedIndividual ;
+    rdfs:label "Scene World 1" ;
+    skiros:FrameId "map"^^xsd:string ;
+    skiros:contain skiros:Door-10,
+        skiros:Door-11,
+        skiros:Door-12,
+        skiros:Door-13,
+        skiros:Door-6,
+        skiros:Door-7,
+        skiros:Door-8,
+        skiros:Door-9,
+        skiros:Room-1,
+        skiros:Room-2,
+        skiros:Room-3,
+        skiros:Room-4,
+        skiros:Room-5,
+        cora:Robot-14 .
+
+skiros:Bread-22 a skiros:Bread,
+        owl:NamedIndividual ;
+    rdfs:label "bread" .
+
+skiros:Butter-25 a skiros:Butter,
+        owl:NamedIndividual ;
+    rdfs:label "butter" .
+
+skiros:Charger-21 a skiros:Charger,
+        owl:NamedIndividual ;
+    rdfs:label "charger" ;
+    skiros:Reachable true .
+
+skiros:Door-10 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_kitchen_trash" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-2,
+        skiros:Room-3 .
+
+skiros:Door-11 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_kitchen_office" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-2,
+        skiros:Room-5 .
+
+skiros:Door-12 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_closet_trash" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-3,
+        skiros:Room-4 .
+
+skiros:Door-13 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_closet_office" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-4,
+        skiros:Room-5 .
+
+skiros:Door-6 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_dining_office" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-1,
+        skiros:Room-5 .
+
+skiros:Door-7 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_dining_closet" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-1,
+        skiros:Room-4 .
+
+skiros:Door-8 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_dining_trash" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-1,
+        skiros:Room-3 .
+
+skiros:Door-9 a skiros:Door,
+        owl:NamedIndividual ;
+    rdfs:label "hall_dining_kitchen" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:adjacentLocation skiros:Room-1,
+        skiros:Room-2 .
+
+skiros:Dumpster-20 a skiros:Dumpster,
+        owl:NamedIndividual ;
+    rdfs:label "dumpster" ;
+    skiros:Open true ;
+    skiros:Reachable true .
+
+skiros:Fridge-17 a skiros:Fridge,
+        owl:NamedIndividual ;
+    rdfs:label "fridge" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Butter-25,
+        skiros:Soda-24 .
+
+skiros:Location-16 a skiros:Location,
+        owl:NamedIndividual ;
+    rdfs:label "desk" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Waste-26 .
+
+skiros:Location-19 a skiros:Location,
+        owl:NamedIndividual ;
+    rdfs:label "bin" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Waste-27 .
+
+skiros:Pantry-18 a skiros:Pantry,
+        owl:NamedIndividual ;
+    rdfs:label "pantry" ;
+    skiros:Open true ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Bread-22,
+        skiros:Snacks-23 .
+
+skiros:Snacks-23 a skiros:Snacks,
+        owl:NamedIndividual ;
+    rdfs:label "snacks" .
+
+skiros:Soda-24 a skiros:Soda,
+        owl:NamedIndividual ;
+    rdfs:label "soda" .
+
+skiros:Table-15 a skiros:Table,
+        owl:NamedIndividual ;
+    rdfs:label "table" ;
+    skiros:Open true ;
+    skiros:Reachable true .
+
+skiros:Waste-26 a skiros:Waste,
+        owl:NamedIndividual ;
+    rdfs:label "waste" .
+
+skiros:Waste-27 a skiros:Waste,
+        owl:NamedIndividual ;
+    rdfs:label "waste" .
+
+rparts:GripperEffector-15 a rparts:GripperEffector,
+        owl:NamedIndividual ;
+    rdfs:label "Robi robot gripper" ;
+    skiros:ContainerState "Empty"^^xsd:string ;
+    skiros:DiscreteReasoner "AauSpatialReasoner"^^xsd:string .
+
+cora:Robot-14 a cora:Robot,
+        owl:NamedIndividual ;
+    rdfs:label "robi:robot" ;
+    skiros:BaseFrameId ""^^xsd:string ;
+    skiros:BatteryPercentage "100"^^xsd:float ;
+    skiros:DiscreteReasoner "AauSpatialReasoner"^^xsd:string ;
+    skiros:FrameId "cora:Robot-14"^^xsd:string ;
+    skiros:PublishTf true ;
+    skiros:SkillMgr "robot"^^xsd:string ;
+    skiros:Template "robi:robot"^^xsd:string ;
+    skiros:at skiros:Room-1 ;
+    skiros:hasA rparts:GripperEffector-15 ;
+    skiros:hasTemplate robi:robot .
+
+skiros:Room-2 a skiros:Room,
+        owl:NamedIndividual ;
+    rdfs:label "kitchen" ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Fridge-17,
+        skiros:Pantry-18 .
+
+skiros:Room-3 a skiros:Room,
+        owl:NamedIndividual ;
+    rdfs:label "trash" ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Dumpster-20 .
+
+skiros:Room-4 a skiros:Room,
+        owl:NamedIndividual ;
+    rdfs:label "closet" ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Charger-21 .
+
+skiros:Room-5 a skiros:Room,
+        owl:NamedIndividual ;
+    rdfs:label "office" ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Location-16,
+        skiros:Location-19 .
+
+skiros:Room-1 a skiros:Room,
+        owl:NamedIndividual ;
+    rdfs:label "dining" ;
+    skiros:Reachable true ;
+    skiros:contain skiros:Table-15 .
+

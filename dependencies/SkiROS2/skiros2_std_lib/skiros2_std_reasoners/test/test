@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+from skiros2_std_reasoners import aau_spatial_reasoner
+import doctest
+
+if __name__ == '__main__':
+    print("========= TEST WITH DOCTEST ===========")
+    if True:
+        print("========= Testing Aau spatial reasoner =========")
+        doctest.testmod(aau_spatial_reasoner, verbose=False)

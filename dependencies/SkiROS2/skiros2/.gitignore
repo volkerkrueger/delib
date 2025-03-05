@@ -1,0 +1,5 @@
+*.user
+*.pyc
+*.creator
+*.pddl
+skiros2_doc/html/*

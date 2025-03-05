@@ -1,0 +1,71 @@
+name: Lint
+
+on:
+  push:
+      branches: [ "main" ]
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build:
+    name: Pre-commit checks
+    strategy:
+      fail-fast: false
+      matrix:
+        # linter: [
+        #   "pylint",
+        #   "pycodestyle",
+        #   "flake8",
+        #   "mypy",
+        #   "isort"
+        #   ]
+        # package: [
+        #   "as2fm_common",
+        #   "jani_generator",
+        #   "jani_visualizer",
+        #   "scxml_converter",
+        #   "trace_visualizer"
+        #   ]
+        include:
+            # (for humble):
+          - python-version: "3.10"
+            # os: "ubuntu-latest"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Europe/Berlin"
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Update pip
+        run: |
+          pip install --upgrade pip
+          pip install setuptools_rust
+      - name: Install packages
+        run: |
+          pip install .
+      # - uses: marian-code/python-lint-annotate@v4
+      #   with:
+      #     python-root-list: src/${{ matrix.package }}
+      #     python-version: ${{ matrix.python-version }}
+      #     use-pylint: ${{ matrix.linter == 'pylint' }}
+      #     use-pycodestyle: ${{ matrix.linter == 'pycodestyle' }}
+      #     use-flake8: ${{ matrix.linter == 'flake8' }}
+      #     use-black: false
+      #     use-mypy: ${{ matrix.linter == 'mypy' }}
+      #     use-isort: ${{ matrix.linter == 'isort' }}
+      #     use-vulture: false
+      #     use-pydocstyle: false
+      #     extra-pylint-options: ""
+      #     extra-pycodestyle-options: ""
+      #     extra-flake8-options: "--max-line-length=100"
+      #     extra-black-options: ""
+      #     extra-mypy-options: "--ignore-missing-imports"
+      #     extra-isort-options: ""
+      - name: Pre-commit
+        uses: pre-commit/action@v3.0.1
