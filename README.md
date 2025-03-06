@@ -60,7 +60,7 @@ docker compose --help
 First, open a terminal window and clone this repository and its submodules.
 
 ```bash
-git clone --recurse-submodules git@github.com:volkerkrueger/delib.git
+git clone git@github.com:volkerkrueger/delib.git
 ```
 
 Change into the repository folder (`cd delib`) and start the Docker container.
